@@ -1,0 +1,23 @@
+{
+    "name": "scoala-romanu",
+    "version": "1.0.0",
+    "description": "Editorial by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
+    "main": "index.js",
+    "scripts": {
+        "start": "eleventy --serve",
+        "build": "eleventy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/StefanPuia/scoala-romanu.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/StefanPuia/scoala-romanu/issues"
+    },
+    "homepage": "https://github.com/StefanPuia/scoala-romanu#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.12.1"
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "html.suggest.html5": true,
+  "emmet.includeLanguages": {
+    "njk": "html"
+  }
+}
