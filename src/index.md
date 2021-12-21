@@ -6,7 +6,7 @@ heroHeaderCaption: hero header caption
 heroDescription: hero description
 heroLink: /
 heroLinkText: Learn more
-heroImage: /images/pic10.jpg
+heroImage: /uploads/pic10.jpg
 heroImageAlt:
 showFeatures: true
 featuresHeader: features

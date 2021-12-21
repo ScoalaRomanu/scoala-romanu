@@ -2,7 +2,6 @@ const { DateTime } = require("luxon");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = (config) => {
-  config.addPassthroughCopy("./src/images");
   config.addPassthroughCopy("./src/uploads");
   config.addPassthroughCopy("./src/assets/js");
   config.addPassthroughCopy("./src/assets/css/main.min.css");

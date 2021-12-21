@@ -8,14 +8,20 @@ public_folder: "/uploads"
 collections:
   - name: "page"
     label: "Page"
-    folder: "pages"
+    folder: "src/pages"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Tags", name: "tags", widget: "hidden", default: "pages" }
       - { label: "Titlu", name: "title", widget: "string" }
       - { label: "Continut", name: "body", widget: "markdown", required: false }
-      - { label: "Fisiere", name: "files", widget: "file", required: false }
+      - {
+          label: "Fisiere",
+          name: "files",
+          widget: "file",
+          required: false,
+          media_library: { config: { multiple: true } },
+        }
       - { label: "Featured", name: "isFeatured", widget: "boolean", default: false }
       - {
           label: "Link permanent",
@@ -58,7 +64,7 @@ collections:
 
   - name: "index"
     label: "Home Page"
-    folder: "src"
+    folder: "src/src"
     create: false
     delete: false
     slug: "{{slug}}"
@@ -99,7 +105,7 @@ collections:
 
   - name: "home-feature"
     label: "Home features"
-    folder: "home-features"
+    folder: "src/home-features"
     create: true
     slug: "{{slug}}"
     fields:
