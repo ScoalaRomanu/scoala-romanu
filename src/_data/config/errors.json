@@ -1,5 +1,5 @@
 {
   "http_404": {
-    "header": "Pagina pe care ati accesat-o nu exista."
+    "header": "Pagina pe care ați accesat-o nu există.\n\n[Navigați acasă](/)"
   }
 }
