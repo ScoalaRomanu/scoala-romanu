@@ -1,11 +1,11 @@
 {
   "permalink": false,
   "layout": "sidebar.njk",
-  "featuresTitle": "Some features",
+  "featuresTitle": "Articole importante",
   "contact": {
-    "header": "contact us",
-    "description": "hello",
-    "email": "test@example.com",
+    "header": "Contact",
+    "description": "",
+    "email": "contact@scoalaromanu.ro",
     "phone": "0123456789",
     "address": "123 Street Rd"
   },
