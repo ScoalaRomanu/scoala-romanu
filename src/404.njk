@@ -3,4 +3,4 @@ layout: "base.njk"
 permalink: 404.html
 ---
 
-<h3>{{ config.errors.http_404.header | safe }}</h3>
+{% markdown %}{{ config.errors.http_404.header }}{% endmarkdown %}

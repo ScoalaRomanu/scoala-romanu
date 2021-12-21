@@ -23,7 +23,7 @@
       <header class="major">
         <h2>{{ config.sidebar.contact.header }}</h2>
       </header>
-      <p>{{ config.sidebar.contact.description | safe }}</p>
+      <p>{% markdown %}{{ config.sidebar.contact.description }}{% endmarkdown %}</p>
       <ul class="contact">
         {% if config.sidebar.contact.email %}
         <li class="icon solid fa-envelope">
@@ -38,14 +38,16 @@
           >
         </li>
         {% endif %} {% if config.sidebar.contact.address %}
-        <li class="icon solid fa-home">{{ config.sidebar.contact.address | safe }}</li>
+        <li class="icon solid fa-home">{{ config.sidebar.contact.address }}</li>
         {% endif %}
       </ul>
     </section>
 
     {% if config.sidebar.copyright %}
     <footer id="footer">
-      <p class="copyright">{{ config.sidebar.copyright | safe }}</p>
+      <p class="copyright">
+        {% markdown %}{{ config.sidebar.copyright }}{% endmarkdown %}
+      </p>
     </footer>
     {% endif %}
   </div>
