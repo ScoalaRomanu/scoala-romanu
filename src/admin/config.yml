@@ -1,11 +1,12 @@
-local_backend: true
+# local_backend: true
+# site_url: http://localhost:8080
+
 backend:
   name: git-gateway
   branch: main
 
 media_folder: src/uploads
 public_folder: /uploads
-site_url: http://localhost:8080
 locale: ro
 publish_mode: editorial_workflow
 
@@ -64,6 +65,10 @@ collections:
 
           - label: Antet sectiune "featured pages"
             name: featuredPagesHeader
+            widget: string
+
+          - label: Text buton "featured"
+            name: featuredButtonText
             widget: string
 
       - label: Sidebar

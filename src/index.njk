@@ -55,7 +55,9 @@ layout: "base.njk"
       <h3>{{ page.data.title }}</h3>
       <p>{{ page.data.excerpt }}</p>
       <ul class="actions">
-        <li><a href="{{ page.url }}" class="button">Citeste</a></li>
+        <li>
+          <a href="{{ page.url }}" class="button">{{ config.home.featuredButtonText }}</a>
+        </li>
       </ul>
     </article>
     {% endfor %}

@@ -9,5 +9,6 @@
   "heroImage": "/uploads/pic10.jpg",
   "heroImageAlt": "",
   "featuresHeader": "features",
-  "featuredPagesHeader": "featured pages"
+  "featuredPagesHeader": "featured pages",
+  "featuredButtonText": "Citeste"
 }
