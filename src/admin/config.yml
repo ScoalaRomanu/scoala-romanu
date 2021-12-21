@@ -2,118 +2,157 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "src/uploads"
-public_folder: "/uploads"
+media_folder: src/uploads
+public_folder: /uploads
 
 collections:
-  - name: "page"
-    label: "Page"
-    folder: "src/pages"
+  - name: page
+    label: Page
+    folder: src/pages
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Tags", name: "tags", widget: "hidden", default: "pages" }
-      - { label: "Titlu", name: "title", widget: "string" }
-      - { label: "Continut", name: "body", widget: "markdown", required: false }
-      - {
-          label: "Fisiere",
-          name: "files",
-          widget: "file",
-          required: false,
-          media_library: { config: { multiple: true } },
-        }
-      - { label: "Featured", name: "isFeatured", widget: "boolean", default: false }
-      - {
-          label: "Link permanent",
-          name: "permalink",
-          widget: "boolean",
-          required: false,
-          default: true,
-          hint: "Nu debifati aceasta optiune decat daca folositi optiunea URL de la Configurare meniu",
-        }
-      - {
-          label: "Configurare meniu",
-          name: "eleventyNavigation",
-          widget: "object",
-          fields:
-            [
-              { label: "Cheie", name: "key", widget: string },
-              {
-                label: "Cheie parinte",
-                name: "parent",
-                widget: string,
-                required: false,
-                hint: "Daca aceasta optiune nu este setata, pagina nu va putea fi accesata. Paginile parinte sunt folosite doar pentru a grupa alte paginin, nu pentru a afisa continut",
-              },
-              {
-                label: "Titlu alternativ pentru meniu",
-                name: "title",
-                widget: string,
-                required: false,
-              },
-              { label: "Ordine", name: "order", widget: "number", default: 1 },
-              {
-                label: "URL",
-                name: "url",
-                widget: "string",
-                required: false,
-                hint: 'Folosit pentru linkuri externe. **Setati "Link permanent" la `fals`**.',
-              },
-            ],
-        }
+      - label: Tags
+        name: tags
+        widget: hidden
+        default: pages
 
-  - name: "index"
-    label: "Home Page"
-    folder: "src/src"
+      - label: Titlu
+        name: title
+        widget: string
+
+      - label: Continut
+        name: body
+        widget: markdown
+        required: false
+
+      - label: Fisiere
+        name: files
+        widget: file
+        required: false
+        media_library:
+          config:
+            multiple: true
+
+      - label: Featured
+        name: isFeatured
+        widget: boolean
+        default: false
+
+      - label: Link permanent
+        name: permalink
+        widget: boolean
+        required: false
+        default: true
+        hint: Nu debifati aceasta optiune decat daca folositi optiunea URL de la Configurare meniu
+
+      - label: Configurare meniu
+        name: eleventyNavigation
+        widget: object
+        fields:
+          - label: Cheie
+            name: key
+            widget: string
+
+          - label: Cheie parinte
+            name: parent
+            widget: string
+            required: false
+            hint: "Daca aceasta optiune nu este setata
+              pagina nu va putea fi accesata. Paginile parinte sunt folosite doar pentru a grupa alte paginin
+              nu pentru a afisa continut"
+
+          - label: Titlu alternativ pentru meniu
+            name: title
+            widget: string
+            required: false
+
+          - label: Ordine
+            name: order
+            widget: number
+            default: 1
+
+          - label: URL
+            name: url
+            widget: string
+            required: false
+            hint: Folosit pentru linkuri externe. **Setati "Link permanent" la `fals`**.
+
+  - name: index
+    label: Home Page
+    folder: src/src
     create: false
     delete: false
     slug: "{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "index.njk" }
-      - { label: "Titlu pagina", name: "title", widget: "string" }
-      - { label: "Antent principal", name: "heroHeader", widget: "text" }
-      - {
-          label: "Subtitlu antent principal",
-          name: "heroHeaderCaption",
-          widget: "markdown",
-        }
-      - {
-          label: "Descriere antent principal",
-          name: "heroDescription",
-          widget: "markdown",
-        }
-      - { label: "Link antent principal", name: "heroLink", widget: "string" }
-      - { label: "Link text antet principal", name: "heroLinkText", widget: "string" }
-      - { label: "Imagine antet principal", name: "heroImage", widget: "image" }
-      - {
-          label: "Descriere imagine antet principal",
-          name: "heroImageAlt",
-          widget: "text",
-        }
-      - { label: 'Arata sectiunea "features"', name: "showFeatures", widget: "boolean" }
-      - { label: 'Antet sectiune "features"', name: "featuresHeader", widget: "string" }
-      - {
-          label: 'Arata sectiunea "featured pages"',
-          name: "showFeaturedPages",
-          widget: "boolean",
-        }
-      - {
-          label: 'Antet sectiune "featured pages"',
-          name: "featuredPagesHeader",
-          widget: "string",
-        }
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: index.njk
 
-  - name: "home-feature"
-    label: "Home features"
-    folder: "src/home-features"
+      - label: Titlu pagina
+        name: title
+        widget: string
+
+      - label: Antent principal
+        name: heroHeader
+        widget: text
+
+      - label: Subtitlu antent principal
+        name: heroHeaderCaption
+        widget: markdown
+
+      - label: Descriere antent principal
+        name: heroDescription
+        widget: markdown
+
+      - label: Link antent principal
+        name: heroLink
+        widget: string
+
+      - label: Link text antet principal
+        name: heroLinkText
+        widget: string
+
+      - label: Imagine antet principal
+        name: heroImage
+        widget: image
+
+      - label: Descriere imagine antet principal
+        name: heroImageAlt
+        widget: text
+
+      - label: Arata sectiunea "features"
+        name: showFeatures
+        widget: boolean
+
+      - label: Antet sectiune "features"
+        name: featuresHeader
+        widget: string
+
+      - label: Arata sectiunea "featured pages"
+        name: showFeaturedPages
+        widget: boolean
+
+      - label: Antet sectiune "featured pages"
+        name: featuredPagesHeader
+        widget: string
+
+  - name: home-feature
+    label: Home features
+    folder: src/home-features
     create: true
     slug: "{{slug}}"
     fields:
-      - {
-          label: "Icon",
-          name: "icon",
-          widget: "string",
-          hint: "[Lista iconite](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free). Ex: `fa-edit`",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: Icon
+        name: icon
+        widget: string
+        hint: "[Lista iconite](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free). Ex: `fa-edit`"
+
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Body
+        name: body
+        widget: markdown
