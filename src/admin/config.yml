@@ -17,9 +17,9 @@ collections:
     delete: false
     slug: "{{slug}}"
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "src/_data/config/home.json"
+      - label: Home Page
+        name: home
+        file: src/_data/config/home.json
         fields:
           - label: Layout
             name: layout
@@ -66,9 +66,9 @@ collections:
             name: featuredPagesHeader
             widget: string
 
-      - label: "Sidebar"
-        name: "sidebar"
-        file: "src/_data/config/sidebar.json"
+      - label: Sidebar
+        name: sidebar
+        file: src/_data/config/sidebar.json
         fields:
           - label: Layout
             name: layout
@@ -112,6 +112,28 @@ collections:
           - label: Copyright
             name: copyright
             widget: markdown
+
+      - label: Social
+        name: social
+        file: src/_data/config/social.json
+        fields:
+          - label: Antent
+            name: header
+            widget: object
+            fields:
+              - label: Text principal
+                name: main
+                widget: string
+
+              - label: Text secundar
+                name: sub
+                widget: string
+                required: false
+
+          - label: Facebook URL
+            name: facebook
+            widget: string
+            required: false
 
   - name: page
     label: Page

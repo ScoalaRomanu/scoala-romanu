@@ -3,6 +3,7 @@
     <h2>Menu</h2>
   </header>
   <ul>
+    <li><a href="/">Acasa</a></li>
     {% for page in (collections.pages | eleventyNavigation) %}
     <li>
       {% if page.children.length > 0 %}
@@ -17,18 +18,5 @@
       {% endif %}
     </li>
     {% endfor %}
-    <li><a href="/">Homepage</a></li>
-    <li>
-      <span class="opener">Submenu</span>
-      <ul>
-        <li><a href="#">Lorem Dolor</a></li>
-      </ul>
-    </li>
-    <li>
-      <span class="opener">Another Submenu</span>
-      <ul>
-        <li><a href="#">Lorem Dolor</a></li>
-      </ul>
-    </li>
   </ul>
 </nav>
