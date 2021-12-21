@@ -1,6 +1,6 @@
-import { DateTime } from "luxon";
+const { DateTime } = require("luxon");
 
-export default (config) => {
+module.exports = (config) => {
   config.addPassthroughCopy("./src/images");
   config.addPassthroughCopy("./src/uploads");
   config.addPassthroughCopy("./src/assets/js");
