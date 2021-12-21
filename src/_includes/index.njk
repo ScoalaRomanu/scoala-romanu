@@ -43,7 +43,7 @@ layout: "base.njk"
     <h2>{{ featuredPagesHeader }}</h2>
   </header>
   <div class="posts">
-    {% for page in collections.featuredPages %}
+    {% for page in (collections.pages | featuredPages) %}
     <article>
       <a href="{{ page.url }}" class="image"
         ><img src="{{ page.data.image }}" alt=""
