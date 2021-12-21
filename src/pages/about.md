@@ -2,8 +2,8 @@
 title: Despre noi
 image: /uploads/pic09.jpg
 excerpt: Some description
-menuOrder: -10
-isFeatured: true
+isFeatured: false
+permalink: false
 eleventyNavigation:
   key: about
 ---

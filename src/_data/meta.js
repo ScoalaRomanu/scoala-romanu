@@ -1,4 +1,7 @@
+const siteUrl = process.env.URL || "http://localhost:8080";
+
 module.exports = {
-  env: process.env.NODE_ENV,
-  locale: process.env.LOCALE,
+  siteUrl,
+  siteDescription: "Scoala Gimnaziala Romanu COM. ROMANU, JUD. BRAILA",
+  siteImage: siteUrl + "/uploads/scoala.jpg",
 };

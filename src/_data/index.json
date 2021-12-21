@@ -1,0 +1,13 @@
+{
+  "title": "Home",
+  "layout": "index.njk",
+  "heroHeader": "hero header",
+  "heroHeaderCaption": "hero header caption",
+  "heroDescription": "hero description",
+  "heroLink": "/",
+  "heroLinkText": "Learn more",
+  "heroImage": "/uploads/pic10.jpg",
+  "heroImageAlt": "",
+  "featuresHeader": "features",
+  "featuredPagesHeader": "featured pages"
+}

@@ -5,25 +5,29 @@ layout: "base.njk"
 <section id="banner">
   <div class="content">
     <header>
-      <h1>{{ heroHeader }}</h1>
-      <p>{{ heroHeaderCaption }}</p>
+      <h1>{{ config.home.heroHeader }}</h1>
+      <p>{{ config.home.heroHeaderCaption }}</p>
     </header>
-    <p>{{ heroDescription }}</p>
+    <p>{{ config.home.heroDescription }}</p>
     {% if heroLink %}
     <ul class="actions">
-      <li><a href="{{ heroLink }}" class="button big">{{ heroLinkText }}</a></li>
+      <li>
+        <a href="{{ config.home.heroLink }}" class="button big"
+          >{{ config.home.heroLinkText }}</a
+        >
+      </li>
     </ul>
     {% endif %}
   </div>
   <span class="image object">
-    <img src="{{ heroImage }}" alt="{{ heroImageAlt }}" />
+    <img src="{{ config.home.heroImage }}" alt="{{ config.home.heroImageAlt }}" />
   </span>
 </section>
 
-{% if showFeatures %}
+{% if (collections.homeFeatures.length > 0) %}
 <section>
   <header class="major">
-    <h2>{{featuresHeader}}</h2>
+    <h2>{{ config.home.featuresHeader }}</h2>
   </header>
   <div class="features">
     {% for feature in collections.homeFeatures %}
@@ -37,7 +41,7 @@ layout: "base.njk"
     {% endfor %}
   </div>
 </section>
-{% endif %} {% if showFeaturedPages %}
+{% endif %} {% if (collections.pages | featuredPages).length > 0 %}
 <section>
   <header class="major">
     <h2>{{ featuredPagesHeader }}</h2>

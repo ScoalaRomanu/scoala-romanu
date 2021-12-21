@@ -1,22 +1,124 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: main
 
 media_folder: src/uploads
 public_folder: /uploads
+site_url: http://localhost:8080
+locale: ro
+publish_mode: editorial_workflow
 
 collections:
+  - name: index
+    label: Global config
+    extension: json
+    create: false
+    delete: false
+    slug: "{{slug}}"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/_data/config/home.json"
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: index.njk
+
+          - label: Titlu pagina
+            name: title
+            widget: string
+
+          - label: Antent principal
+            name: heroHeader
+            widget: text
+
+          - label: Subtitlu antent principal
+            name: heroHeaderCaption
+            widget: markdown
+
+          - label: Descriere antent principal
+            name: heroDescription
+            widget: markdown
+
+          - label: Link antent principal
+            name: heroLink
+            widget: string
+
+          - label: Link text antet principal
+            name: heroLinkText
+            widget: string
+
+          - label: Imagine antet principal
+            name: heroImage
+            widget: image
+
+          - label: Descriere imagine antet principal
+            name: heroImageAlt
+            widget: text
+
+          - label: Antet sectiune "features"
+            name: featuresHeader
+            widget: string
+
+          - label: Antet sectiune "featured pages"
+            name: featuredPagesHeader
+            widget: string
+
+      - label: "Sidebar"
+        name: "sidebar"
+        file: "src/_data/config/sidebar.json"
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: sidebar.njk
+
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: false
+
+          - label: Titlu sectiune "Sidebar features"
+            name: featuresTitle
+            widget: string
+
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - label: Antet
+                name: header
+                widget: string
+
+              - label: Descriere
+                name: description
+                widget: markdown
+                required: false
+
+              - label: Email
+                name: email
+                widget: string
+
+              - label: Telefon
+                name: phone
+                widget: string
+
+              - label: Adresa
+                name: address
+                widget: string
+
+          - label: Copyright
+            name: copyright
+            widget: markdown
+
   - name: page
     label: Page
     folder: src/pages
     create: true
     slug: "{{slug}}"
     fields:
-      - label: Tags
-        name: tags
-        widget: hidden
-        default: pages
-
       - label: Titlu
         name: title
         widget: string
@@ -26,13 +128,15 @@ collections:
         widget: markdown
         required: false
 
-      - label: Fisiere
-        name: files
-        widget: file
+      - label: Descriere
+        name: excerpt
+        widget: text
         required: false
-        media_library:
-          config:
-            multiple: true
+
+      - label: Imagine
+        name: image
+        widget: image
+        required: false
 
       - label: Featured
         name: isFeatured
@@ -78,68 +182,8 @@ collections:
             required: false
             hint: Folosit pentru linkuri externe. **Setati "Link permanent" la `fals`**.
 
-  - name: index
-    label: Home Page
-    folder: src/src
-    create: false
-    delete: false
-    slug: "{{slug}}"
-    fields:
-      - label: Layout
-        name: layout
-        widget: hidden
-        default: index.njk
-
-      - label: Titlu pagina
-        name: title
-        widget: string
-
-      - label: Antent principal
-        name: heroHeader
-        widget: text
-
-      - label: Subtitlu antent principal
-        name: heroHeaderCaption
-        widget: markdown
-
-      - label: Descriere antent principal
-        name: heroDescription
-        widget: markdown
-
-      - label: Link antent principal
-        name: heroLink
-        widget: string
-
-      - label: Link text antet principal
-        name: heroLinkText
-        widget: string
-
-      - label: Imagine antet principal
-        name: heroImage
-        widget: image
-
-      - label: Descriere imagine antet principal
-        name: heroImageAlt
-        widget: text
-
-      - label: Arata sectiunea "features"
-        name: showFeatures
-        widget: boolean
-
-      - label: Antet sectiune "features"
-        name: featuresHeader
-        widget: string
-
-      - label: Arata sectiunea "featured pages"
-        name: showFeaturedPages
-        widget: boolean
-
-      - label: Antet sectiune "featured pages"
-        name: featuredPagesHeader
-        widget: string
-
   - name: home-feature
-    label: Home features
+    label: Home feature
     folder: src/home-features
     create: true
     slug: "{{slug}}"
@@ -152,6 +196,29 @@ collections:
       - label: Title
         name: title
         widget: string
+
+      - label: Body
+        name: body
+        widget: markdown
+
+  - name: sidebar-feature
+    label: Sidebar feature
+    folder: src/sidebar-features
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Titlu
+        name: title
+        widget: string
+
+      - label: URL
+        name: url
+        widget: string
+
+      - label: Imagine
+        name: image
+        widget: image
+        required: false
 
       - label: Body
         name: body

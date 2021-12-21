@@ -1,0 +1,13 @@
+{
+  "permalink": false,
+  "layout": "sidebar.njk",
+  "featuresTitle": "Some features",
+  "contact": {
+    "header": "contact us",
+    "description": "hello",
+    "email": "test@example.com",
+    "phone": "0123456789",
+    "address": "123 Street Rd"
+  },
+  "copyright": "&copy; Untitled. All rights reserved. Demo Images: <a href=\"https://unsplash.com\">Unsplash</a>. Design: <a href=\"https://html5up.net\">HTML5 UP</a>."
+}
