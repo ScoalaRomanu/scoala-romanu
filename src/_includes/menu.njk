@@ -3,8 +3,19 @@
     <h2>Menu</h2>
   </header>
   <ul>
-    {% for page in (collections.pages | sortMenuItems) %}
-    <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+    {% for page in (collections.pages | eleventyNavigation) %}
+    <li>
+      {% if page.children.length > 0 %}
+      <span class="opener">{{ page.title }}</span>
+      <ul>
+        {% for child in page.children %}
+        <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      {% endif %}
+    </li>
     {% endfor %}
     <li><a href="/">Homepage</a></li>
     <li>
