@@ -8,7 +8,7 @@ backend:
 media_folder: src/uploads
 public_folder: /uploads
 locale: ro
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 collections:
   - name: index
@@ -152,6 +152,18 @@ collections:
             name: facebook
             widget: string
             required: false
+
+      - label: Erori
+        name: errors
+        file: src/_data/config/errors.json
+        fields:
+          - label: Eroare 404
+            name: http_404
+            widget: object
+            fields:
+              - label: Text principal
+                name: header
+                widget: markdown
 
   - name: page
     label: Pagini

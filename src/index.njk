@@ -9,7 +9,7 @@ layout: "base.njk"
       <p>{{ config.home.heroHeaderCaption }}</p>
     </header>
     <p>{{ config.home.heroDescription }}</p>
-    {% if heroLink %}
+    {% if config.home.heroLink %}
     <ul class="actions">
       <li>
         <a href="{{ config.home.heroLink }}" class="button big"
