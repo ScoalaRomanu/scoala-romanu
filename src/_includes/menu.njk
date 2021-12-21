@@ -1,16 +1,27 @@
 <nav id="menu">
   <header class="major">
-    <h2>Meniu</h2>
+    <h2>{{ config.sidebar.menuHeader }}</h2>
   </header>
   <ul>
-    <li><a href="/">Acasa</a></li>
+    <li><a href="/">{{ config.sidebar.homeMenuItemText }}</a></li>
     {% for page in (collections.pages | eleventyNavigation) %}
     <li>
       {% if page.children.length > 0 %}
       <span class="opener">{{ page.title }}</span>
       <ul>
         {% for child in page.children %}
-        <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+        <li>
+          {% if child.children.length > 0 %}
+          <span class="opener">{{ child.title }}</span>
+          <ul>
+            {% for subchild in child.children %}
+            <li><a href="{{ subchild.url }}">{{ subchild.title }}</a></li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <a href="{{ child.url }}">{{ child.title }}</a>
+          {% endif %}
+        </li>
         {% endfor %}
       </ul>
       {% else %}

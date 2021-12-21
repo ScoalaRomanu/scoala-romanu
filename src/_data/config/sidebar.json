@@ -6,8 +6,10 @@
     "header": "Contact",
     "description": "",
     "email": "contact@scoalaromanu.ro",
-    "phone": "0123456789",
-    "address": "123 Street Rd"
+    "phone": "0239 697 181",
+    "address": "Strada Republicii 55, Romanu 817115"
   },
-  "copyright": ""
+  "copyright": "",
+  "menuHeader": "Meniu",
+  "homeMenuItemText": "Acasă"
 }

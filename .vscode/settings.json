@@ -6,5 +6,5 @@
   "emmet.includeLanguages": {
     "njk": "html"
   },
-  "cSpell.words": ["eleventy"]
+  "cSpell.words": ["DATETIME", "eleventy", "passthrough"]
 }

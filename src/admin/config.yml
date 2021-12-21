@@ -97,6 +97,14 @@ collections:
             name: featuresTitle
             widget: string
 
+          - label: Titlu meniu
+            name: menuHeader
+            widget: string
+
+          - label: Link acasa
+            name: homeMenuItemText
+            widget: string
+
           - label: Contact
             name: contact
             widget: object
@@ -214,7 +222,8 @@ collections:
             name: parent
             widget: string
             required: false
-            hint: "Daca aceasta optiune nu este setata
+            hint:
+              "Daca aceasta optiune nu este setata si exista alte pagini care o au pe aceasta ca si parinte,
               pagina nu va putea fi accesata. Paginile parinte sunt folosite doar pentru a grupa alte paginin
               nu pentru a afisa continut"
 
