@@ -8,6 +8,7 @@ excerpt: În 1882, în Romanu s-a înființat prima școală, o școală de băi
   gradiniței în satul Romanu.  În 1962 au început lucrările pentru un nou sediu
   al școlii, acestea fiind finalizate în 1965.
 image: /uploads/scoala.jpg
+imageFullSize: ""
 isFeatured: true
 permalink: true
 eleventyNavigation:

@@ -220,9 +220,10 @@
   $("#menu a").each(function () {
     $(this)
       .filter(function () {
-        return $(this).attr("href") === window.location.pathname;
+        return $(this).attr("href") === decodeURI(window.location.pathname);
       })
       .each(function () {
+        $(this).addClass("active");
         $(this).parentsUntil("#menu", "ul").siblings("span.opener").addClass("active");
       });
   });

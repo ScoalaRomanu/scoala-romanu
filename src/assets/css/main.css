@@ -2877,8 +2877,9 @@ button:disabled,
   font-size: 0.9em;
   padding: 0.625em 0;
 }
-#menu ul a:hover,
-#menu ul span:hover {
+#menu ul a:hover, #menu ul a.active,
+#menu ul span:hover,
+#menu ul span.active {
   color: #f56a6a;
 }
 #menu ul a.opener,

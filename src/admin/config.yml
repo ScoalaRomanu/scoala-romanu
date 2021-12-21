@@ -198,6 +198,17 @@ collections:
         widget: image
         required: false
 
+      - label: Imagine de marime completa
+        name: imageFullSize
+        widget: image
+        required: false
+        hint: Daca acest camp nu e completat, imaginea selectata mai sus va fi selectata.
+
+      - label: Descriere imagine
+        name: imageAlt
+        widget: string
+        required: false
+
       - label: Featured
         name: isFeatured
         widget: boolean
@@ -217,6 +228,9 @@ collections:
           - label: Cheie
             name: key
             widget: string
+            hint: 'Un nume unic folosit pentru gruparea in meniul din stanga.
+              Acest text va fi folosit pentru afisare in meniu daca nu este
+              suprascris de "Titlu alternativ pentru meniu"'
 
           - label: Cheie parinte
             name: parent

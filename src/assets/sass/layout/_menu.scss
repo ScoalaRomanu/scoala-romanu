@@ -27,7 +27,8 @@
       font-size: 0.9em;
       padding: 0.625em 0;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: _palette(accent);
       }
 

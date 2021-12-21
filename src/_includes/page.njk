@@ -1,0 +1,13 @@
+---
+layout: "base.njk"
+---
+
+<section>
+  <header class="main">
+    <h1>{{ title }}</h1>
+  </header>
+  <span class="image main"
+    ><img src="{{ imageFullSize if imageFullSize else image }}" alt="{{ imageAlt }}"
+  /></span>
+  {{ content | safe }}
+</section>
