@@ -43,8 +43,10 @@
       </ul>
     </section>
 
+    {% if config.sidebar.copyright %}
     <footer id="footer">
       <p class="copyright">{{ config.sidebar.copyright | safe }}</p>
     </footer>
+    {% endif %}
   </div>
 </div>

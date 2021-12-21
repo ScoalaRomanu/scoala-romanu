@@ -12,13 +12,13 @@ publish_mode: editorial_workflow
 
 collections:
   - name: index
-    label: Global config
+    label: Configuratie globala
     extension: json
     create: false
     delete: false
     slug: "{{slug}}"
     files:
-      - label: Home Page
+      - label: Pagina de start
         name: home
         file: src/_data/config/home.json
         fields:
@@ -38,18 +38,22 @@ collections:
           - label: Subtitlu antent principal
             name: heroHeaderCaption
             widget: markdown
+            required: false
 
           - label: Descriere antent principal
             name: heroDescription
             widget: markdown
+            required: false
 
           - label: Link antent principal
             name: heroLink
             widget: string
+            required: false
 
           - label: Link text antet principal
             name: heroLinkText
             widget: string
+            required: false
 
           - label: Imagine antet principal
             name: heroImage
@@ -58,18 +62,22 @@ collections:
           - label: Descriere imagine antet principal
             name: heroImageAlt
             widget: text
+            required: false
 
           - label: Antet sectiune "features"
             name: featuresHeader
             widget: string
+            required: false
 
           - label: Antet sectiune "featured pages"
             name: featuredPagesHeader
             widget: string
+            required: false
 
           - label: Text buton "featured"
             name: featuredButtonText
             widget: string
+            required: false
 
       - label: Sidebar
         name: sidebar
@@ -96,6 +104,7 @@ collections:
               - label: Antet
                 name: header
                 widget: string
+                required: false
 
               - label: Descriere
                 name: description
@@ -105,18 +114,22 @@ collections:
               - label: Email
                 name: email
                 widget: string
+                required: false
 
               - label: Telefon
                 name: phone
                 widget: string
+                required: false
 
               - label: Adresa
                 name: address
                 widget: string
+                required: false
 
           - label: Copyright
             name: copyright
             widget: markdown
+            required: false
 
       - label: Social
         name: social
@@ -141,7 +154,7 @@ collections:
             required: false
 
   - name: page
-    label: Page
+    label: Pagini
     folder: src/pages
     create: true
     slug: "{{slug}}"
@@ -210,7 +223,7 @@ collections:
             hint: Folosit pentru linkuri externe. **Setati "Link permanent" la `fals`**.
 
   - name: home-feature
-    label: Home feature
+    label: Home features
     folder: src/home-features
     create: true
     slug: "{{slug}}"
@@ -218,7 +231,7 @@ collections:
       - label: Icon
         name: icon
         widget: string
-        hint: "[Lista iconite](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free). Ex: `fa-edit`"
+        hint: "Click [aici](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free) pentru lista iconite. Exemplu: `fa-edit`"
 
       - label: Title
         name: title
@@ -229,7 +242,7 @@ collections:
         widget: markdown
 
   - name: sidebar-feature
-    label: Sidebar feature
+    label: Sidebar features
     folder: src/sidebar-features
     create: true
     slug: "{{slug}}"

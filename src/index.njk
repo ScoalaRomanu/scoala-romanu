@@ -54,11 +54,13 @@ layout: "base.njk"
       /></a>
       <h3>{{ page.data.title }}</h3>
       <p>{{ page.data.excerpt }}</p>
+      {% if config.home.featuredButtonText %}
       <ul class="actions">
         <li>
           <a href="{{ page.url }}" class="button">{{ config.home.featuredButtonText }}</a>
         </li>
       </ul>
+      {% endif %}
     </article>
     {% endfor %}
   </div>

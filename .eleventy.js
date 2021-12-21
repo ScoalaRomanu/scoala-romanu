@@ -16,10 +16,12 @@ module.exports = (config) => {
     });
   });
   config.addFilter("sortMenuItems", (menuItems) => {
-    return [...menuItems].sort((a, b) => Math.sign(a.data.menuOrder - b.data.menuOrder));
+    return [...(menuItems ?? [])].sort((a, b) =>
+      Math.sign(a.data.menuOrder - b.data.menuOrder)
+    );
   });
   config.addFilter("featuredPages", (pages) => {
-    return [...pages].filter((page) => !!page.data.isFeatured);
+    return [...(pages ?? [])].filter((page) => !!page.data.isFeatured);
   });
 
   config.addPlugin(eleventyNavigationPlugin);
