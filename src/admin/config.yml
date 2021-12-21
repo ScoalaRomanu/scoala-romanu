@@ -193,19 +193,13 @@ collections:
         widget: text
         required: false
 
-      - label: Imagine
-        name: image
-        widget: image
+      - label: Imagine sau fisier
+        name: file
+        widget: file
         required: false
 
-      - label: Imagine de marime completa
-        name: imageFullSize
-        widget: image
-        required: false
-        hint: Daca acest camp nu e completat, imaginea selectata mai sus va fi selectata.
-
-      - label: Descriere imagine
-        name: imageAlt
+      - label: Descriere fisier
+        name: fileAlt
         widget: string
         required: false
 
@@ -213,6 +207,16 @@ collections:
         name: isFeatured
         widget: boolean
         default: false
+
+      - label: Imagine pentru featured widget
+        name: featuredImage
+        widget: image
+        required: false
+
+      - label: Descriere imagine featured widget
+        name: featuredImageAlt
+        widget: string
+        required: false
 
       - label: Link permanent
         name: permalink

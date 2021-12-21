@@ -6,8 +6,6 @@ layout: "base.njk"
   <header class="main">
     <h1>{{ title }}</h1>
   </header>
-  <span class="image main"
-    ><img src="{{ imageFullSize if imageFullSize else image }}" alt="{{ imageAlt }}"
-  /></span>
+  <span class="image main"> {% fileViewer file, fileAlt %} </span>
   {{ content | safe }}
 </section>

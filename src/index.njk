@@ -32,7 +32,7 @@ layout: "base.njk"
   <div class="features">
     {% for feature in collections.homeFeatures %}
     <article>
-      <span class="icon {{ feature.data.icon }}"></span>
+      <span class="icon solid {{ feature.data.icon }}"></span>
       <div class="content">
         <h3>{{ feature.data.title }}</h3>
         <p>{{ feature.templateContent | safe }}</p>
