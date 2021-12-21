@@ -16,6 +16,7 @@ collections:
       - { label: "Titlu", name: "title", widget: "string" }
       - { label: "Continut", name: "body", widget: "markdown" }
       - { label: "Ordine in meniu", name: "menuOrder", widget: "number", default: 1 }
+
   - name: "index"
     label: "Home Page"
     folder: "src"
@@ -24,8 +25,9 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "index.njk" }
       - { label: "Titlu", name: "title", widget: "string" }
+
   - name: "home-feature"
-    label: "Home features",
+    label: "Home features"
     folder: "home-features"
     create: true
     slug: "{{slug}}"
