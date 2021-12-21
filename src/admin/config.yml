@@ -16,15 +16,28 @@ collections:
       - { label: "Titlu", name: "title", widget: "string" }
       - { label: "Continut", name: "body", widget: "markdown" }
       - { label: "Ordine in meniu", name: "menuOrder", widget: "number", default: 1 }
+      - { label: "Fisiere", name: "files", widget: "files" }
 
   - name: "index"
     label: "Home Page"
     folder: "src"
     create: false
+    delete: false
     slug: "{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "index.njk" }
       - { label: "Titlu", name: "title", widget: "string" }
+      - { label: "heroHeader", name: "heroHeader", widget: "text" }
+      - { label: "heroHeaderCaption", name: "heroHeaderCaption", widget: "markdown" }
+      - { label: "heroDescription", name: "heroDescription", widget: "markdown" }
+      - { label: "heroLink", name: "heroLink", widget: "string" }
+      - { label: "heroLinkText", name: "heroLinkText", widget: "string" }
+      - { label: "heroImage", name: "heroImage", widget: "string" }
+      - { label: "heroImageAlt", name: "heroImageAlt", widget: "text" }
+      - { label: "showFeatures", name: "showFeatures", widget: "boolean" }
+      - { label: "featuresHeader", name: "featuresHeader", widget: "string" }
+      - { label: "showFeaturedPages", name: "showFeaturedPages", widget: "boolean" }
+      - { label: "featuredPagesHeader", name: "featuredPagesHeader", widget: "string" }
 
   - name: "home-feature"
     label: "Home features"
@@ -32,6 +45,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Icon", name: "icon", widget: "text" }
-      - { label: "Title", name: "title", widget: "text" }
+      - { label: "Icon", name: "icon", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
