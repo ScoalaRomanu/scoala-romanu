@@ -15,6 +15,10 @@ module.exports = (config) => {
       locale: process.env.LOCALE,
     });
   });
+  config.addFilter("sortMenuItems", (menuItems) => {
+    let values = [...menuItems];
+    return values.sort((a, b) => Math.sign(a.data.menuOrder - b.data.menuOrder));
+  });
 
   return {
     dir: {

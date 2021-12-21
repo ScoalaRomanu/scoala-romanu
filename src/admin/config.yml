@@ -7,7 +7,7 @@ public_folder: "/uploads"
 
 collections:
   - name: "page"
-    label: "Pagina"
+    label: "Page"
     folder: "pages"
     create: true
     slug: "{{slug}}"
@@ -15,12 +15,21 @@ collections:
       - { label: "Tags", name: "tags", widget: "hidden", default: "pages" }
       - { label: "Titlu", name: "title", widget: "string" }
       - { label: "Continut", name: "body", widget: "markdown" }
-      - { label: "Ordine in meniu", name: "menuOrder", widget: "number", default: -1 }
+      - { label: "Ordine in meniu", name: "menuOrder", widget: "number", default: 1 }
   - name: "index"
-    label: "Pagina principala"
+    label: "Home Page"
     folder: "src"
     create: false
     slug: "{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "index.njk" }
       - { label: "Titlu", name: "title", widget: "string" }
+  - name: "home-feature"
+    label: "Home features",
+    folder: "home-features"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Icon", name: "icon", widget: "text" }
+      - { label: "Title", name: "title", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }

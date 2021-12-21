@@ -3,7 +3,7 @@
     <h2>Menu</h2>
   </header>
   <ul>
-    {% for page in collections.pages %}
+    {% for page in (collections.pages | sortMenuItems) %}
     <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
     {% endfor %}
     <li><a href="/">Homepage</a></li>

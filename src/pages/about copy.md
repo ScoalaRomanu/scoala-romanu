@@ -1,9 +1,9 @@
 ---
-title: Despre noi
+title: Some other stuff
 tags: ["pages", "featuredPages"]
 image: /images/pic09.jpg
 excerpt: Some description
-menuOrder: -10
+menuOrder: 1
 ---
 
 test
