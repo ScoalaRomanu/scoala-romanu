@@ -1,0 +1,23 @@
+<nav id="menu">
+  <header class="major">
+    <h2>Menu</h2>
+  </header>
+  <ul>
+    {% for page in collections.pages %}
+    <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+    {% endfor %}
+    <li><a href="/">Homepage</a></li>
+    <li>
+      <span class="opener">Submenu</span>
+      <ul>
+        <li><a href="#">Lorem Dolor</a></li>
+      </ul>
+    </li>
+    <li>
+      <span class="opener">Another Submenu</span>
+      <ul>
+        <li><a href="#">Lorem Dolor</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

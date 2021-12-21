@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "page"
+    label: "Pagina"
+    folder: "pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tags", name: "tags", widget: "hidden", default: "pages" }
+      - { label: "Titlu", name: "title", widget: "string" }
+      - { label: "Continut", name: "body", widget: "markdown" }
+      - { label: "Ordine in meniu", name: "menuOrder", widget: "number", default: -1 }
+  - name: "index"
+    label: "Pagina principala"
+    folder: "src"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "index.njk" }
+      - { label: "Titlu", name: "title", widget: "string" }
