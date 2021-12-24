@@ -12,7 +12,8 @@ const getFileViewHTML = (file, fileAlt) => {
 
   const iframe = (url) =>
     `<iframe src="${url}" title=${fileAlt} frameborder="0"` +
-    ` style="height: 90vh; width: 100%"/></iframe>`;
+    ` style="height: 90vh; width: 100%"/></iframe>` +
+    `<a href="${url}" target="_blank">${url}</a>`;
 
   switch (fileExtension) {
     case "png":

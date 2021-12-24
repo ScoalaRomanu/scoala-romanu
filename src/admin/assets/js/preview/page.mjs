@@ -44,14 +44,41 @@ export const PagePreview = createClass({
   },
 });
 
+const getFileView = (file, fileAlt, blob) => {
+  const fileExtension = !!file ? file.split(".").pop().toLowerCase() : null;
+
+  switch (fileExtension) {
+    case "png":
+    case "jpg":
+    case "jpeg":
+    case "gif":
+      return h("img", { src: blob, alt: fileAlt });
+    default:
+      return elc(
+        "h4",
+        "box",
+        "Previzualizarea este disponibila doar pentru imagini in editor. " +
+          "Pagina publicata va putea afisa imagini, fisiere PDF si Office."
+      );
+  }
+};
+
 function page(entry, props) {
+  const fileUrl = entry.getIn(["data", "file"]);
+  const fileAlt = entry.getIn(["data", "fileAlt"]);
+  const fileBlob = props.getAsset(fileUrl).toString();
   return el(
     "section",
     elc(
       "header",
       "main",
       el("h1", entry.getIn(["data", "title"])),
-      elc("span", "image main"),
+      elc(
+        "span",
+        "image main",
+        getFileView(fileUrl, fileAlt, fileBlob),
+        h("a", { href: "javascript:;" }, fileUrl)
+      ),
       props.widgetFor("body")
     )
   );
