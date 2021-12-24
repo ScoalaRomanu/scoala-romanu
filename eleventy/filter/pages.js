@@ -10,7 +10,7 @@ module.exports = [
   [
     "featuredPages",
     (pages) => {
-      return [...(pages ?? [])].filter((page) => !!page.data.isFeatured);
+      return [...(pages ?? [])].filter((page) => !!page.data.featured?.isFeatured);
     },
   ],
 ];

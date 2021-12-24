@@ -50,10 +50,10 @@ layout: "base.njk"
     {% for page in (collections.pages | featuredPages) %}
     <article>
       <a href="{{ page.url }}" class="image"
-        ><img src="{{ page.data.image }}" alt=""
+        ><img src="{{ page.data.featured.image }}" alt=""
       /></a>
       <h3>{{ page.data.title }}</h3>
-      <p>{{ page.data.excerpt }}</p>
+      <p>{{ page.data.featured.excerpt }}</p>
       {% if config.home.featuredButtonText %}
       <ul class="actions">
         <li>

@@ -202,20 +202,20 @@ collections:
         name: featured
         widget: object
         fields:
-      - label: Featured
-        name: isFeatured
-        widget: boolean
-        default: false
+          - label: Featured
+            name: isFeatured
+            widget: boolean
+            default: false
 
-      - label: Imagine pentru featured widget
+          - label: Imagine pentru featured widget
             name: image
-        widget: image
-        required: false
+            widget: image
+            required: false
 
-      - label: Descriere imagine featured widget
+          - label: Descriere imagine featured widget
             name: imageAlt
-        widget: string
-        required: false
+            widget: string
+            required: false
 
           - label: Descriere
             name: excerpt

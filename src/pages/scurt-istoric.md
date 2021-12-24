@@ -1,21 +1,21 @@
 ---
-excerpt: În 1882, în Romanu s-a înființat prima școală, o școală de băieți
-  întreținută de stat și frecventată de 25 de elevi. În 1890 s-a înființat și o
-  școală de fete, frecventată de 40 de eleve, întreținută de județ și de comună.
-  Potrivit monografului Nae Vasilescu, în 1906 în Romanu exista o școală mixtă
-  cu un local propriu, construit în anul 1890. În anul 1892 se pun bazele
-  gradiniței în satul Romanu.  În 1962 au început lucrările pentru un nou sediu
-  al școlii, acestea fiind finalizate în 1965.
-imageFullSize: ""
 title: Scurt istoric
 file: /uploads/scoala.jpg
-isFeatured: true
+featured:
+  isFeatured: true
+  image: /uploads/scoala.jpg
+  excerpt: În 1882, în Romanu s-a înființat prima școală, o școală de băieți
+    întreținută de stat și frecventată de 25 de elevi. În 1890 s-a înființat și
+    o școală de fete, frecventată de 40 de eleve, întreținută de județ și de
+    comună. Potrivit monografului Nae Vasilescu, în 1906 în Romanu exista o
+    școală mixtă cu un local propriu, construit în anul 1890. În anul 1892 se
+    pun bazele gradiniței în satul Romanu. În 1962 au început lucrările pentru
+    un nou sediu al școlii, acestea fiind finalizate în 1965.
 permalink: true
 eleventyNavigation:
   order: 1
   key: Scurt istoric
   parent: Date generale
-image: /uploads/scoala.jpg
 ---
 
 În 1882, în Romanu s-a înființat prima școală, o școală de băieți întreținută de stat și frecventată de 25 de elevi. În 1890 s-a înființat și o școală de fete, frecventată de 40 de eleve, întreținută de județ și de comună. Potrivit monografului Nae Vasilescu, în 1906 în Romanu exista o școală mixtă cu un local propriu, construit în anul 1890. În anul 1892 se pun bazele gradiniței în satul Romanu.  În 1962 au început lucrările pentru un nou sediu al școlii, acestea fiind finalizate în 1965.
@@ -33,9 +33,5 @@ Grădiniţa cu Program Normal Romanu, cu sediul în localitatea Romanu, care fun
 Gădiniţa cu Program Normal Oancea, cu sediul în satul Oancea, care funcţionează cu o singură grupă combinată.
 
 Fiecare clădire este dotată corespunzător desfăşurării actului educaţional.
-
-
-
-
 
 Școala noastră implementează proiectul [Kidibot](https://www.kidibot.ro/)
