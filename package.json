@@ -7,7 +7,8 @@
     "minify-js": "minify src/assets/js/main.js > src/assets/js/main.min.js && minify src/assets/js/util.js > src/assets/js/util.min.js",
     "minify-css": "minify src/assets/css/main.css > src/assets/css/main.min.css",
     "sass-compile": "sass src/assets/sass/main.scss src/assets/css/main.css",
-    "start": "cross-env NODE_ENV=development eleventy --serve",
+    "dev": "cross-env NODE_ENV=development eleventy --serve",
+    "start": "concurrently --kill-others \"npm run dev\" \"npm run netlify-cms-proxy\"",
     "prebuild": "rimraf public && npm run sass-compile && npm run minify-js && npm run minify-css",
     "build": "cross-env NODE_ENV=production eleventy",
     "netlify-cms-proxy": "netlify-cms-proxy-server"
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-navigation": "^0.3.2",
+    "concurrently": "^6.5.1",
     "cross-env": "^7.0.3",
     "luxon": "^2.2.0",
     "markdown-it": "^12.3.0",

@@ -44,7 +44,7 @@ layout: "base.njk"
 {% endif %} {% if (collections.pages | featuredPages).length > 0 %}
 <section>
   <header class="major">
-    <h2>{{ featuredPagesHeader }}</h2>
+    <h2>{{ config.home.featuredPagesHeader }}</h2>
   </header>
   <div class="posts">
     {% for page in (collections.pages | featuredPages) %}

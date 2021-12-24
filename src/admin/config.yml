@@ -11,7 +11,7 @@ locale: ro
 # publish_mode: editorial_workflow
 
 collections:
-  - name: index
+  - name: global-config
     label: Configuratie globala
     extension: json
     create: false
@@ -19,7 +19,7 @@ collections:
     slug: "{{slug}}"
     files:
       - label: Pagina de start
-        name: home
+        name: config-home
         file: src/_data/config/home.json
         fields:
           - label: Layout
@@ -80,7 +80,7 @@ collections:
             required: false
 
       - label: Sidebar
-        name: sidebar
+        name: config-sidebar
         file: src/_data/config/sidebar.json
         fields:
           - label: Layout
@@ -93,16 +93,16 @@ collections:
             widget: hidden
             default: false
 
-          - label: Titlu sectiune "Sidebar features"
-            name: featuresTitle
-            widget: string
-
           - label: Titlu meniu
             name: menuHeader
             widget: string
 
-          - label: Link acasa
+          - label: Text link acasa
             name: homeMenuItemText
+            widget: string
+
+          - label: Titlu sectiune "Sidebar features"
+            name: featuresTitle
             widget: string
 
           - label: Contact
@@ -140,7 +140,7 @@ collections:
             required: false
 
       - label: Social
-        name: social
+        name: config-social
         file: src/_data/config/social.json
         fields:
           - label: Antent
@@ -162,7 +162,7 @@ collections:
             required: false
 
       - label: Erori
-        name: errors
+        name: config-errors
         file: src/_data/config/errors.json
         fields:
           - label: Eroare 404
@@ -188,11 +188,6 @@ collections:
         widget: markdown
         required: false
 
-      - label: Descriere
-        name: excerpt
-        widget: text
-        required: false
-
       - label: Imagine sau fisier
         name: file
         widget: file
@@ -204,19 +199,28 @@ collections:
         required: false
 
       - label: Featured
+        name: featured
+        widget: object
+        fields:
+      - label: Featured
         name: isFeatured
         widget: boolean
         default: false
 
       - label: Imagine pentru featured widget
-        name: featuredImage
+            name: image
         widget: image
         required: false
 
       - label: Descriere imagine featured widget
-        name: featuredImageAlt
+            name: imageAlt
         widget: string
         required: false
+
+          - label: Descriere
+            name: excerpt
+            widget: text
+            required: false
 
       - label: Link permanent
         name: permalink
@@ -229,14 +233,14 @@ collections:
         name: eleventyNavigation
         widget: object
         fields:
-          - label: Cheie
+          - label: Nume
             name: key
             widget: string
             hint: 'Un nume unic folosit pentru gruparea in meniul din stanga.
               Acest text va fi folosit pentru afisare in meniu daca nu este
               suprascris de "Titlu alternativ pentru meniu"'
 
-          - label: Cheie parinte
+          - label: Nume parinte
             name: parent
             widget: string
             required: false
