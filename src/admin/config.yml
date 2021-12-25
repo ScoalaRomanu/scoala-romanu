@@ -183,6 +183,12 @@ collections:
         name: title
         widget: string
 
+      - label: Afiseaza sub-pagini ca parte din continut
+        name: showSubPages
+        widget: boolean
+        default: true
+        required: false
+
       - label: Imagine sau fisier
         name: file
         widget: file
@@ -239,12 +245,19 @@ collections:
         name: eleventyNavigation
         widget: object
         fields:
+          - label: Arata in meniu
+            name: showInMenu
+            widget: boolean
+            default: true
+            required: false
+
           - label: Nume
             name: key
             widget: string
             hint: 'Un nume unic folosit pentru gruparea in meniul din stanga.
               Acest text va fi folosit pentru afisare in meniu daca nu este
               suprascris de "Titlu alternativ pentru meniu"'
+            required: false
 
           - label: Nume parinte
             name: parent

@@ -3,9 +3,12 @@ title: Proiecte
 isFeatured: false
 permalink: true
 eleventyNavigation:
+  showInMenu: true
   order: 9
   key: Proiecte
+showSubPages: true
 ---
+
 [![](/uploads/Scoala-Etwinning-300x272.png)](https://www.etwinning.net/ro/pub/support/2020--2021-etwinning-school-l#c642)
 
 <https://www.etwinning.net/ro/pub/support/2020–2021-etwinning-school-l#c642>

@@ -4,10 +4,13 @@ featured:
   isFeatured: false
 permalink: true
 eleventyNavigation:
+  showInMenu: true
   order: 2
   parent: Proiecte eTwinning
   key: "Proiect eTwinning: 30 de zile 30 de provocări"
+showSubPages: true
 ---
+
 Proiectul “30 Days 30 Challenges” reuneşte parteneri din Turcia, România, Scoţia, Germania, Lituania şi Spania. Partnerul din România este reprezentat de elevii si profesorii de la Şcoala Gimnazială Romanu.
 
 Acest proiect eTwinning a apărut din dorinţa de a facilita educaţia non-formală şi a promova învăţarea prin proiecte în perioada Aprilie – Iunie 2020.
@@ -20,19 +23,19 @@ Prin acest proiect:
 
 Elevii au avut oportunitatea:
 
-* să descopere instrumente de învățare electronică și să pregătească lucrări creative folosind aceste instrumente
-* să înțeleagă valoarea mediului digital pentru a spori învățarea
-* să afle informaţii despre netiquette și siguranța online
-* să continue învățarea din confortul caselor lor
-* să se distreze acasă, realizând sarcini plăcute și împărtășind rezultatele lor cu alți elevi europeni
-* să-și îmbunătățească limbajul, abilitățile sociale și practice și competențele digitale
+- să descopere instrumente de învățare electronică și să pregătească lucrări creative folosind aceste instrumente
+- să înțeleagă valoarea mediului digital pentru a spori învățarea
+- să afle informaţii despre netiquette și siguranța online
+- să continue învățarea din confortul caselor lor
+- să se distreze acasă, realizând sarcini plăcute și împărtășind rezultatele lor cu alți elevi europeni
+- să-și îmbunătățească limbajul, abilitățile sociale și practice și competențele digitale
 
 Profesorii implicaţi în acest proiect:
 
-* s-au familiarizat cu platforme virtuale pentru învățământul la distanță
-* au facut schimb de bune practici cu alţi profesori din Europa
-* și-au dezvoltat metodele de predare
-* și-au imbunătăţit cooperarea cu parteneri europeni
+- s-au familiarizat cu platforme virtuale pentru învățământul la distanță
+- au facut schimb de bune practici cu alţi profesori din Europa
+- și-au dezvoltat metodele de predare
+- și-au imbunătăţit cooperarea cu parteneri europeni
 
 Unul dintre produsele realizate de către echipa elevilor din România poate fi vizionat accesând urmatorul link:
 

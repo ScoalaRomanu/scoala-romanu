@@ -6,7 +6,9 @@ featured:
   isFeatured: false
 permalink: true
 eleventyNavigation:
+  showInMenu: true
   order: 1
   key: Plan managerial
   parent: Management
+showSubPages: true
 ---

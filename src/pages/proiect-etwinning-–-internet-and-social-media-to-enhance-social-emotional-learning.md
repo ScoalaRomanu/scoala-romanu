@@ -5,11 +5,14 @@ featured:
   isFeatured: false
 permalink: true
 eleventyNavigation:
+  showInMenu: true
   order: 3
   key: Proiect eTwinning – Internet and Social Media to Enhance Social-Emotional
     Learning
   parent: Proiecte eTwinning
+showSubPages: true
 ---
+
 ![](/uploads/103945403_3028116353939743_517915186493397882_n-300x189.jpg)
 
 ![](/uploads/103959452_584831282164450_52290507702525404_n-300x225.jpg)
@@ -20,9 +23,9 @@ Proiectul își propune să facă autentică învățarea socială și emoționa
 
 Obiectivele proiectului sunt:
 
-* încurajarea interacțiunilor sociale pozitive între colegi
-* dezvoltarea competențelor sociale și emoționale – conștientizarea de sine, managementul de sine și reglementarea emoțiilor, conștientizarea socială, relația și abilitățile sociale, luarea deciziilor responsabile
-* promovarea TIC în scopuri de învățare și educație
+- încurajarea interacțiunilor sociale pozitive între colegi
+- dezvoltarea competențelor sociale și emoționale – conștientizarea de sine, managementul de sine și reglementarea emoțiilor, conștientizarea socială, relația și abilitățile sociale, luarea deciziilor responsabile
+- promovarea TIC în scopuri de învățare și educație
 
 În cadrul acestui proiect, elevii au folosit instrumente Web 2.0 pentru a crea diferite produse de proiect cum ar fi: postere, jocuri online, cărţi electronice şi logo-uri.
 

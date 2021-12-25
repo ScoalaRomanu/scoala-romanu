@@ -5,10 +5,13 @@ featured:
   isFeatured: false
 permalink: true
 eleventyNavigation:
+  showInMenu: true
   order: 1
   parent: Proiecte eTwinning
   key: "Proiect eTwinning: Inside Out"
+showSubPages: true
 ---
+
 ![](/uploads/etwinning_logo_656x369-500x281.png)
 
 Școala Gimnazială Romanu este unul dintre partenerii proiectului eTwinning numit „Inside Out”, care are ca scop promovarea educației digitale, dezvoltarea competențelor TIC și de limbi străine și crearea unui mediu educațional virtual de tip flipped classroom și creșterea interesului pentru învățare, a motivației, a creativității și a capacității de gândire critică.

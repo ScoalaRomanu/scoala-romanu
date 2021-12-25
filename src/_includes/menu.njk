@@ -4,7 +4,7 @@
   </header>
   <ul>
     <li><a href="/">{{ config.sidebar.homeMenuItemText }}</a></li>
-    {% for page in (collections.pages | eleventyNavigation) %}
+    {% for page in (collections.pages | shownInMenu | eleventyNavigation) %}
     <li>
       {% if page.children.length > 0 %}
       {% menuLink page, collections.pages %}
