@@ -3,13 +3,11 @@ layout: "base.njk"
 ---
 
 <section>
+  {% breadcrumbs title, eleventyNavigation.parent, collections.pages %}
   <header class="main">
     <h1>{{ title }}</h1>
   </header>
   <span class="image main"> {% fileViewer file, fileAlt %} </span>
-  {% if googleDriveFolderID %}
-  <iframe src="https://drive.google.com/embeddedfolderview?id={{ googleDriveFolderID }}#list" style="width:100%; height: 80vh; border:0;"></iframe>
-  {% endif %}
   {% set navigationKey = eleventyNavigation.key %}
   {% if showSubPages %}
   <ul>
@@ -19,4 +17,7 @@ layout: "base.njk"
   </ul>
   {% endif %}
   {{ content | safe }}
+  {% if googleDriveFolderID %}
+  <iframe src="https://drive.google.com/embeddedfolderview?id={{ googleDriveFolderID }}#list" style="width:100%; height: 80vh; border:0;"></iframe>
+  {% endif %}
 </section>

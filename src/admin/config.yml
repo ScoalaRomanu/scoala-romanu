@@ -257,7 +257,6 @@ collections:
             hint: 'Un nume unic folosit pentru gruparea in meniul din stanga.
               Acest text va fi folosit pentru afisare in meniu daca nu este
               suprascris de "Titlu alternativ pentru meniu"'
-            required: false
 
           - label: Nume parinte
             name: parent
