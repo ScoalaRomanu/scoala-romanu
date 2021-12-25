@@ -5,7 +5,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: src/uploads
+media_folder: /uploads
 public_folder: /uploads
 locale: ro
 # publish_mode: editorial_workflow
@@ -205,6 +205,7 @@ collections:
           - label: Featured
             name: isFeatured
             widget: boolean
+            required: false
             default: false
 
           - label: Imagine pentru featured widget

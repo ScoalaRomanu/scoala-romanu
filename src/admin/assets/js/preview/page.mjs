@@ -53,6 +53,10 @@ const getFileView = (file, fileAlt, blob) => {
     case "jpeg":
     case "gif":
       return h("img", { src: blob, alt: fileAlt });
+
+    case null:
+      return "";
+
     default:
       return elc(
         "h4",

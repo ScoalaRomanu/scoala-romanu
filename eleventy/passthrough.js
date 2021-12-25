@@ -1,6 +1,6 @@
 module.exports.passthrough = [
   "src/admin",
-  "src/uploads",
+  "uploads",
   "src/assets/js/breakpoints.min.js",
   "src/assets/js/browser.min.js",
   "src/assets/js/main.min.js",

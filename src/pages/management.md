@@ -3,6 +3,6 @@ title: Management
 isFeatured: false
 permalink: true
 eleventyNavigation:
-  order: 1
+  order: 2
   key: Management
 ---
