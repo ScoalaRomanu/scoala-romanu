@@ -13,7 +13,17 @@ const getFileViewHTML = (file, fileAlt) => {
   const iframe = (url) =>
     `<iframe src="${url}" title=${fileAlt} frameborder="0"` +
     ` style="height: 90vh; width: 100%"/></iframe>` +
-    `<a href="${url}" target="_blank">${url}</a>`;
+    `<a href="${file}" target="_blank">${file}</a>`;
+
+  if (/^https?:\/\/.+/i.test(file)) {
+    const googleDrive = file.match(
+      /^(https:\/\/drive.google.com\/.+\/)view\?usp=sharing(.*)$/i
+    );
+    if (googleDrive) {
+      return iframe(`${googleDrive[1]}preview${googleDrive[2]}`);
+    }
+    return iframe(file);
+  }
 
   switch (fileExtension) {
     case "png":

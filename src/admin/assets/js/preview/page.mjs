@@ -62,9 +62,17 @@ const getFileView = (file, fileAlt, blob) => {
         "h4",
         "box",
         "Previzualizarea este disponibila doar pentru imagini in editor. " +
-          "Pagina publicata va putea afisa imagini, fisiere PDF si Office."
+          "Pagina publicata va putea afisa imagini, linkuri, fisiere PDF si Office."
       );
   }
+};
+
+const googleDriveFolder = (entry) => {
+  const folderId = entry.getIn(["data", "googleDriveFolderID"]);
+  return (
+    folderId &&
+    elc("h4", "box", "Previzualizarea nu este disponibila pentru folderele Google Drive.")
+  );
 };
 
 function page(entry, props) {
@@ -83,6 +91,7 @@ function page(entry, props) {
         getFileView(fileUrl, fileAlt, fileBlob),
         h("a", { href: "javascript:;" }, fileUrl)
       ),
+      googleDriveFolder(entry),
       props.widgetFor("body")
     )
   );

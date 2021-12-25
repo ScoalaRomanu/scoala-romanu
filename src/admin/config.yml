@@ -183,14 +183,19 @@ collections:
         name: title
         widget: string
 
-      - label: Continut
-        name: body
-        widget: markdown
-        required: false
-
       - label: Imagine sau fisier
         name: file
         widget: file
+        required: false
+
+      - label: ID folder Google Drive
+        name: googleDriveFolderID
+        widget: string
+        required: false
+
+      - label: Continut
+        name: body
+        widget: markdown
         required: false
 
       - label: Descriere fisier

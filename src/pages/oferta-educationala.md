@@ -1,11 +1,11 @@
 ---
 title: Oferta educationala
 isFeatured: false
-file: /uploads/Oferta-educationala-2016-2017.pdf
+file: https://drive.google.com/file/d/1PpgYEZUfYbFQv414TzXSw41WQvPqJgx9/view?usp=sharing
+googleDriveFolderID: 1pkVwxbsnHmY5NF0UdEJwqL80MH4pwW1Y
 permalink: true
 eleventyNavigation:
   order: 5
   key: Oferta educationala
   parent: Management
 ---
-[Oferta educationala 2015-2016](/uploads/OFERTA-EDUCATIONALA.pdf)

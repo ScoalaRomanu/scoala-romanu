@@ -1,6 +1,6 @@
 ---
 title: Proiect de dezvoltare institutionala
-file: /uploads/PDI-2019-2023.pdf
+file: https://drive.google.com/file/d/1RGzTPH15BU5wRUX1B1hLqDuboh9LagLx/view?usp=sharing
 isFeatured: false
 permalink: true
 eleventyNavigation:
