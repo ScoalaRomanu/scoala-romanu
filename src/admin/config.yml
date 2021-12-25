@@ -233,7 +233,7 @@ collections:
         widget: boolean
         required: false
         default: true
-        hint: Nu debifati aceasta optiune decat daca folositi optiunea URL de la Configurare meniu
+        hint: Debifati aceasta optiune daca folositi optiunea URL de la Configurare meniu
 
       - label: Configurare meniu
         name: eleventyNavigation
@@ -250,10 +250,7 @@ collections:
             name: parent
             widget: string
             required: false
-            hint:
-              "Daca aceasta optiune nu este setata si exista alte pagini care o au pe aceasta ca si parinte,
-              pagina nu va putea fi accesata. Paginile parinte sunt folosite doar pentru a grupa alte paginin
-              nu pentru a afisa continut"
+            hint: "Numele paginii folosita ca parinte in meniu (setat deasupra pe pagina respectiva)"
 
           - label: Titlu alternativ pentru meniu
             name: title

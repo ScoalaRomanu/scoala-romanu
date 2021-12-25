@@ -7,12 +7,12 @@
     {% for page in (collections.pages | eleventyNavigation) %}
     <li>
       {% if page.children.length > 0 %}
-      <span class="opener">{{ page.title }}</span>
+      {% menuLink page, collections.pages %}
       <ul>
         {% for child in page.children %}
         <li>
           {% if child.children.length > 0 %}
-          <span class="opener">{{ child.title }}</span>
+          {% menuLink child, collections.pages %}
           <ul>
             {% for subchild in child.children %}
             <li><a href="{{ subchild.url }}">{{ subchild.title }}</a></li>

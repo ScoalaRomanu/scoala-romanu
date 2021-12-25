@@ -10,5 +10,11 @@ layout: "base.njk"
   {% if googleDriveFolderID %}
   <iframe src="https://drive.google.com/embeddedfolderview?id={{ googleDriveFolderID }}#list" style="width:100%; height: 80vh; border:0;"></iframe>
   {% endif %}
+  {% set navigationKey = eleventyNavigation.key %}
+  <ul>
+    {% pagechildren collections.pages, navigationKey %}{% raw %}
+      <li><a href="{{ child.page.url }}">{{ child.title }}</a></li>
+    {% endraw %}{% endpagechildren %}
+  </ul>
   {{ content | safe }}
 </section>

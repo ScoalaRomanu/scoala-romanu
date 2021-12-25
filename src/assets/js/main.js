@@ -201,9 +201,6 @@
     var $this = $(this);
 
     $this.on("click", function (event) {
-      // Prevent default.
-      event.preventDefault();
-
       // Toggle.
       $menu_openers
         .filter(function () {
@@ -224,7 +221,8 @@
       })
       .each(function () {
         $(this).addClass("active");
-        $(this).parentsUntil("#menu", "ul").siblings("span.opener").addClass("active");
+        $(this).parentsUntil("#menu", "ul").siblings(".opener").addClass("active");
+        $(this).parentsUntil("#menu", ".opener").addClass("active");
       });
   });
 })(jQuery);
