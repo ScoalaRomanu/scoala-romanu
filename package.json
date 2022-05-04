@@ -28,7 +28,7 @@
     "@11ty/eleventy-navigation": "0.3.2",
     "concurrently": "7.1.0",
     "cross-env": "7.0.3",
-    "follow-redirects": "1.14.9",
+    "follow-redirects": "1.15.0",
     "luxon": "2.3.2",
     "markdown-it": "13.0.1",
     "minify": "8.0.4",
