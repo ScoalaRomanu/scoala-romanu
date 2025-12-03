@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/StefanPuia/scoala-romanu#readme",
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy": "3.1.2",
     "@11ty/eleventy-navigation": "0.3.5",
     "concurrently": "8.2.2",
     "cross-env": "7.0.3",
